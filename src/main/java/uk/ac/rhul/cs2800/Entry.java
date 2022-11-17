@@ -11,6 +11,8 @@ package uk.ac.rhul.cs2800;
 public class Entry {
   float myFloat;
   String myString;
+  Type type;
+  Symbol other;
 
   /**
    * Initialises float value.
@@ -19,6 +21,7 @@ public class Entry {
    */
   public Entry(float f) {
     myFloat = f;
+    type = Type.NUMBER;
   }
 
   /**
@@ -28,8 +31,18 @@ public class Entry {
    */
   public Entry(String s) {
     myString = s;
+    type = Type.STRING;
   }
-
+  
+  /**
+   * Initialises string value.
+   *
+   * @param s The string to be added
+   */
+  public Entry(Symbol which) {
+    other = which;
+    type = Type.SYMBOL;
+  }
 
 
   /**
@@ -64,15 +77,6 @@ public class Entry {
       return String.valueOf(myFloat);
     }
 
-    // String results[] = new String[2];
-    // if (!Objects.isNull(myString)) {
-    // results[0] = myString;
-    // }
-    // if (!Objects.isNull(myFloat)) {
-    // results[1] = String.valueOf(myFloat);
-    // }
-    // System.out.print(results[1]);
-    // return results[0] + " " + results[1];
 
   }
 
