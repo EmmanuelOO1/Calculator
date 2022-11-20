@@ -14,10 +14,6 @@ import java.util.List;
 public class Rhulstack {
 	int size = 0;
 	List<Entry> value = new ArrayList<Entry>();
-	//List<Entry> list;
-	
-
-	//private List<uk.ac.rhul.cs2800.Entry> list;
 
 	/**
 	 * Returns the Length of Stack.
