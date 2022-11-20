@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 class TestStrStack {
 	private StrStack strStack;
 	
+	
 	@BeforeEach
 	public void setup() {
 		strStack = new StrStack();
@@ -15,8 +16,14 @@ class TestStrStack {
 	 
 	
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testSize() {
+		assertEquals(strStack.size(), 0, "")
+	}
+	
+	@Test
+	void testPush() {
+		
+		assertEquals("Not yet implemented");
 	}
 
 }

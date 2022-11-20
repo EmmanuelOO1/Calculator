@@ -18,15 +18,14 @@ class NumStackTest {
   //1
   @Test
   void testSize() {
-    Numstack.size();
-    assertEquals(Numstack.size(), 0, "Testing whether I can push an Entry to the stack");
+    assertEquals(Numstack.size(), 0, "Testing whether I can check the size of the numstack");
   }
   
   //2
   @Test
   void testPush() {
     Numstack.push(1.0f);
-    assertEquals(Numstack.size(), 1, "Testing whether I can push an Entry to the stack");
+    assertEquals(Numstack.size(), 1, "Testing whether I can push to the numstack");
   }
   
   //3
@@ -34,7 +33,7 @@ class NumStackTest {
   void testPop() {
     Numstack.push(3.0f);
 	Numstack.pop();
-    assertEquals(Numstack.size(), 0, "Testing whether I can push an Entry to the stack");
+    assertEquals(Numstack.size(), 0, "Testing whether I can pop from the stack");
   }
   
   //4
@@ -56,7 +55,7 @@ class NumStackTest {
     Numstack.pop();
     Numstack.pop();
     Numstack.pop();
-    assertEquals(Numstack.isEmpty(), true, "Testing whether I can push an Entry to the stack");
+    assertEquals(Numstack.isEmpty(), true, "Testing whether isEmpty will return the correct values wh");
 	  
   }
   
