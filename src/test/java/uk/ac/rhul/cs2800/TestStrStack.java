@@ -58,5 +58,13 @@ class TestStrStack {
       assertEquals(strStack.isEmpty(), true, "Testing whether isEmpty will return the correct values wh");
   	  
     }
+    
+    //6
+    //Check ifEmptys return when Stack is not empty
+    @Test
+    void testNotEmpty() {
+	strStack.push("Hi");
+	assertEquals(strStack.isEmpty(), false, "Testing whether isEmpty will return the correct values wh");
+    }
 
 }
