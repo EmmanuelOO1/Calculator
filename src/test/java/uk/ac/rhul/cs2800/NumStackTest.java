@@ -11,17 +11,20 @@ class NumStackTest {
   private NumStack Numstack;
 	
   @BeforeEach
+  //Setting up a new instance of Numstack before every test
   public void setup() {
     Numstack = new NumStack();
   }
  
   //1
+  //Should be able to check the size of the stack
   @Test
   void testSize() {
     assertEquals(Numstack.size(), 0, "Testing whether I can check the size of the numstack");
   }
   
   //2
+  //Should be able to add to the size of the Numstack
   @Test
   void testPush() {
     Numstack.push(1.0f);
@@ -29,6 +32,7 @@ class NumStackTest {
   }
   
   //3
+  //Should be able to pop from the Numstack
   @Test
   void testPop() {
     Numstack.push(3.0f);
@@ -37,7 +41,7 @@ class NumStackTest {
   }
   
   //4
-  // Test whether the method will throw an exception when popping from an empty stack 
+  //Test whether the method will throw an exception when popping from an empty stack 
   @Test
   void testPopEmptyExeption() {
 	   Numstack.push(5.0f);

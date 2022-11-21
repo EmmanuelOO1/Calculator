@@ -17,12 +17,12 @@ class TestStrStack {
 	
 	@Test
 	void testSize() {
-		assertEquals(strStack.size(), 0, "")
+		assertEquals(strStack.size(), 0, "");
 	}
 	
 	@Test
 	void testPush() {
-		
+		strStack.push("Hi")
 		assertEquals("Not yet implemented");
 	}
 
