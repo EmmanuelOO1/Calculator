@@ -14,16 +14,16 @@ class TestStrStack {
 		strStack = new StrStack();
 	}
 	 
-	
+	//1 Should be able to check the size of a list 
 	@Test
 	void testSize() {
-		assertEquals(strStack.size(), 0, "");
+		assertEquals(strStack.size(), 0, "List size should be zero at this point");
 	}
 	
 	@Test
 	void testPush() {
-		strStack.push("Hi")
-		assertEquals("Not yet implemented");
+		strStack.push("Hi");
+		assertEquals(strStack.size(), 0, "Not yet implemented");
 	}
 
 }
