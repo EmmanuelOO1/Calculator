@@ -12,51 +12,51 @@ import java.util.EmptyStackException;
  */
 public class NumStack {
     int size = 0;
-	ArrayList<Float> numstack = new ArrayList<Float>();
+    ArrayList<Float> numstack = new ArrayList<Float>();
 
-	/**
-	 * Returns the size of the NumStack
-	 * 
-	 * @return Size of the NumStack.
-	 */
-	public int size() {
-		return size;
+    /**
+     * Returns the size of the NumStack
+     * 
+     * @return Size of the NumStack.
+     */
+    public int size() {
+	return size;
+    }
+
+    /**
+     * Pushes a Float to the NumStack.
+     * 
+     * @param Float to be pushed to the NumStack.
+     */
+    public void push(float f) {
+	numstack.add(f);
+	size++;
+    }
+
+    /**
+     * Pops values from the NumStack.
+     * 
+     */
+    public void pop() {
+	if (size == 0) {
+	    throw new EmptyStackException();
 	}
 
-	/**
-	 * Pushes a Float to the NumStack.
-	 * 
-	 * @param Float to be pushed to the NumStack.
-	 */
-	public void push(float f) {
-		numstack.add(f);
-		size++;
-	}
+	Float oldEntry = numstack.get(size - 1);
+	numstack.remove(oldEntry);
+	size--;
+    }
 
-	/**
-	 * Pops values from the NumStack.
-	 * 
-	 */
-	public void pop() {
-		if (size == 0) {
-			throw new EmptyStackException();
-		}
-
-		Float oldEntry = numstack.get(size - 1);
-		numstack.remove(oldEntry);
-		size--;
+    /**
+     * Checks whether the NumStack is Empty or not.
+     * 
+     * @return Returns a boolean value based on whether the NumStack is empty or not
+     */
+    public boolean isEmpty() {
+	if (size == 0) {
+	    return true;
 	}
-
-	/**
-	 * Checks whether the NumStack is Empty or not.
-	 * 
-	 * @return Returns a boolean value based on whether the NumStack is empty or not
-	 */
-	public boolean isEmpty() {
-		if (size == 0) {
-			return true;
-		}
-		return false;
-	}
+	return false;
+    }
 
 }
