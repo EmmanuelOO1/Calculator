@@ -27,15 +27,36 @@ class TestStrStack {
     @Test
     void testPush() {
 	strStack.push("Hi");
-	assertEquals(strStack.size(), 0, "Not yet implemented");
+	assertEquals(strStack.size(), 1, "pushed one string to stack so the size of stack should be one");
     }
 
     // 3
     @Test
     void testPop() {
 	assertThrows(EmptyStackException.class, () -> strStack.pop(),"You cannot pop from an empty StrStack should throw an exeption");
-
-	
+    }
+    
+    // 4
+    @Test
+    void testPushthenPop() {
+	strStack.push("Hello There");
+	strStack.pop();
+	assertEquals(strStack.size(), 0, "You cannot pop from an empty StrStack should throw an exeption");
+    }
+    
+    
+    //5
+    //Check if empty When pushed to twice then popped from twice 
+    @Test
+    void testisEmpty() {
+      strStack.push("Hello");
+      strStack.push("My");
+      strStack.push("Name");
+      strStack.pop();
+      strStack.pop();
+      strStack.pop();
+      assertEquals(strStack.isEmpty(), true, "Testing whether isEmpty will return the correct values wh");
+  	  
     }
 
 }

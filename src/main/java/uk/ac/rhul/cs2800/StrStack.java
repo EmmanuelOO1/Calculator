@@ -18,6 +18,7 @@ public class StrStack {
     }
 
     public void push(String string) {
+	size = size + 1;
 	StrStack.add(string);
     }
 
@@ -30,6 +31,13 @@ public class StrStack {
 	StrStack.remove(oldEntry);
 	size--;
     
+    }
+
+    public Object isEmpty() {
+	if(size == 0) {
+	    return true;
+	} 
+	return false;
     }
 
 }
