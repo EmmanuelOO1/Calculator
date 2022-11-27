@@ -33,7 +33,7 @@ public class Entry {
     myString = s;
     type = Type.STRING;
   }
-  
+
   /**
    * Initialises string value.
    *

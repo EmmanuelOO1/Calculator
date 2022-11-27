@@ -1,6 +1,5 @@
 package uk.ac.rhul.cs2800;
 
-import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 /**
@@ -11,7 +10,7 @@ import java.util.EmptyStackException;
  */
 public class StrStack {
     int size = 0;
-    ArrayList<String> StrStack = new ArrayList<String>();
+    Rhulstack StrStack = new Rhulstack();
 
     /**
      * Size of StrStack Function.
@@ -28,23 +27,26 @@ public class StrStack {
      * @param string to be pushed to the stack
      */
     public void push(String string) {
-	size = size + 1;
-	StrStack.add(string);
+	Entry NewEntry = new Entry(string);
+
+	StrStack.push(NewEntry);
+	size++;
     }
 
     /**
      * Removes the last Entry from the StrStack.
      * 
+     * @Returns the entry that was poped from the StrStack
      */
-    public void pop() {
+    public Entry pop() {
 	if (size == 0) {
 	    throw new EmptyStackException();
 	}
 
-	String oldEntry = StrStack.get(size - 1);
-	StrStack.remove(oldEntry);
+	Entry oldEntry = StrStack.pop();
 	size--;
-    
+	return oldEntry;
+
     }
 
     /**
@@ -53,9 +55,9 @@ public class StrStack {
      * @return True or false if its empty or not
      */
     public Object isEmpty() {
-	if(size == 0) {
+	if (size == 0) {
 	    return true;
-	} 
+	}
 	return false;
     }
 

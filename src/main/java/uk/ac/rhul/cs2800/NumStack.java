@@ -1,7 +1,5 @@
 package uk.ac.rhul.cs2800;
 
-import java.util.ArrayList;
-//import java.util.List;
 import java.util.EmptyStackException;
 
 /**
@@ -12,7 +10,7 @@ import java.util.EmptyStackException;
  */
 public class NumStack {
     int size = 0;
-    ArrayList<Float> numstack = new ArrayList<Float>();
+    Rhulstack numstack = new Rhulstack();
 
     /**
      * Returns the size of the NumStack
@@ -29,7 +27,9 @@ public class NumStack {
      * @param Float to be pushed to the NumStack.
      */
     public void push(float f) {
-	numstack.add(f);
+	Entry NewEntry = new Entry(f);
+
+	numstack.push(NewEntry);
 	size++;
     }
 
@@ -37,14 +37,14 @@ public class NumStack {
      * Pops values from the NumStack.
      * 
      */
-    public void pop() {
+    public Entry pop() {
 	if (size == 0) {
 	    throw new EmptyStackException();
 	}
 
-	Float oldEntry = numstack.get(size - 1);
-	numstack.remove(oldEntry);
+	Entry oldEntry = numstack.pop();
 	size--;
+	return oldEntry;
     }
 
     /**
