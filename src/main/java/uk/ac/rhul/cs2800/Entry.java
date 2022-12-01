@@ -37,7 +37,7 @@ public class Entry {
   /**
    * Initialises string value.
    *
-   * @param s The string to be added
+   * @paramThe string to be added
    */
   public Entry(Symbol which) {
     other = which;

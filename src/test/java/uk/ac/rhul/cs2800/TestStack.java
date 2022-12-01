@@ -25,6 +25,7 @@ class TestStack {
   @Test
   void testSize() {
     rs = new Rhulstack();
+    assertEquals(rs.size(), 0, "Size should be zero at this point");
   }
 
   // 3
