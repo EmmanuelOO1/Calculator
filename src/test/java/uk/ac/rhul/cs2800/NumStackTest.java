@@ -51,7 +51,7 @@ class NumStackTest {
   }
 
   // 5
-  // Check if empty When pushed to twice then popped from twice
+  // Check if empty When pushed to thrice then popped from thrice
   @Test
   void testisEmpty() {
     numStack.push(4.0f);
@@ -62,7 +62,6 @@ class NumStackTest {
     numStack.pop();
     assertEquals(numStack.isEmpty(), true,
         "Testing whether isEmpty will return the correct values wh");
-
   }
 
   // 6
@@ -70,8 +69,7 @@ class NumStackTest {
   @Test
   void testisEmptyFalse() {
     numStack.push(4.0f);
-    assertEquals(numStack.isEmpty(), false, "Testing whether I can push an Entry to the stack");
-
+    assertEquals(numStack.isEmpty(), false, "Stack is not empty therefore should be false");
   }
 
 

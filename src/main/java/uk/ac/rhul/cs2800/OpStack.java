@@ -1,8 +1,9 @@
 package uk.ac.rhul.cs2800;
 
+import java.util.EmptyStackException;
 
 /**
- * My operator Stack. 
+ * My operator Stack.
  *
  * @author emmanuelokolie
  *
@@ -14,7 +15,7 @@ public class OpStack {
   int size = 0;
 
   /**
-   * Functon returns the current size of the opStack.
+   * Returns the current size of the opStack.
    *
    * @return size of opStack
    *
@@ -32,5 +33,34 @@ public class OpStack {
     this.opStack.push(new Entry(newSymbol));
     size++;
   }
+
+  /**
+   * Removes the last entry from the list.
+   *
+   * @return the old entry popped from the list 
+   */
+  public Object pop() {
+    if (size == 0) {
+      throw new EmptyStackException();
+    }
+    Entry oldEntry = opStack.pop();
+    size--;
+    return oldEntry;
+
+  }
+
+  /**
+   * Checks whether opStack is empty. 
+   *
+   * @return whether opStack is empty or not 
+   */
+  public Object isEmpty() {
+    if (size == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 }
