@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>210</y>
+      <w>250</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>_CS2800::Entry_
+Entry values stored in Stack
+--
+Attributes
+-number:float
+-str:String
+-type:Type
+-other:Symbol
+--
+Responsibilities
+&lt;&lt;constructor&gt;&gt; +Entry(float)
+&lt;&lt;constructor&gt;&gt; +Entry(String)
+&lt;&lt;constructor&gt;&gt; +Entry(Symbolwhich)
++getValue(): float
++getString():String
++toString();
++equals(); object o
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>220</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+_cs2800::Symbol_
+A list of the non-number tokens
+possible in an expression
+--
+_LEFT_BRACKET_
+_RIGHT_BRACKET_
+_TIMES_
+_DIVIDE_
+_PLUS_
+_MINUS_
+_INVALID_
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>330</y>
+      <w>140</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>440</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumiration&gt;&gt;
+_cs2800::Type_
+A list of the types of
+value an Entry can represent 
+--
+_NUMBER_
+_SYMBOL_
+_STRING_
+_INVALID_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>330</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;190.0</additional_attributes>
+  </element>
+</diagram>
