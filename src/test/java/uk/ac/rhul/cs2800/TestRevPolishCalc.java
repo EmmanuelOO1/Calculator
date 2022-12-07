@@ -16,21 +16,21 @@ class TestRevPolishCalc {
   // RevPolishCalc should be able to add two positive numbers
   @Test
   void testAddPositive() {
-    assertEquals(values.evaluate("2  3 + "), 5.0f, "2+ 3 should be 5");
+    assertEquals(values.evaluate("2 3 +"), 5.0f, "2+ 3 should be 5");
   }
 
   // 2
-  // RevPolishCalc should be able to add two nevative numbers.
+  // RevPolishCalc should be able to add two negative numbers.
   @Test
   void testAddNegative() {
-    assertEquals(values.evaluate("-2  -3 + "), -5.0f, "-3+ -2 should be -5");
+    assertEquals(values.evaluate("-2 -3 +"), -5.0f, "-3+ -2 should be -5");
   }
 
   // 3
   // RevPolishCalc should be able to subtract two numbers.
   @Test
   void testSubtract() {
-    assertEquals(values.evaluate("2  3 - "), 1.0f, "3 - 2 should be 1");
+    assertEquals(values.evaluate("2 3 -"), -1.0f, "3 - 2 should be 1");
   }
 
 

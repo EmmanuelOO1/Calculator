@@ -1,26 +1,32 @@
 package uk.ac.rhul.cs2800;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class RevPolishCalc {
   NumStack values = new NumStack();
 
   public float evaluate(String string) {
-    Scanner myScanner = new Scanner(string); // Create a Scanner object
-
-  //  while (myScanner.hasNext()) {
-  //    if (myScanner.hasNextFloat()) {
-  //      values.push(myScanner.nextFloat());
-  //      continue;
-
-   //     }
-      
+//    Scanner myScanner = new Scanner(string); // Create a Scanner object
+//
+//  //  while (myScanner.hasNext()) {
+//  //    if (myScanner.hasNextFloat()) {
+//  //      values.push(myScanner.nextFloat());
+//  //      continue;
+//
+//   //     }
+//      
+//    
+//    Scanner scanner = new Scanner(string);  // Create a Scanner object
+//    String userName = scanner.nextLine();  // Read user input
+//    System.out.println("Username is: " );  // Output user input
       
     float value1;
     float value2;
     
-    for(int i = 0; i < string.length(); i++) {
-      switch(string(i)) {
+    String[] numSymbols = string.split(" ");
+        
+    for(int i = 0; i < numSymbols.length; i++) {
+      switch(numSymbols[i]) {
         case"+":
           value1 = values.pop();
           value2 = values.pop();
@@ -46,12 +52,12 @@ public class RevPolishCalc {
           break;
           
         default:
-          values.push(Double.parseDouble(string(i)));
+          values.push(Float.parseFloat(numSymbols[i]));
           
           
         
       }
-      }
+      
     }
 
 
