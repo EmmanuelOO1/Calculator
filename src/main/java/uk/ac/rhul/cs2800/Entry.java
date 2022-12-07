@@ -76,11 +76,9 @@ public class Entry {
     } else {
       return String.valueOf(myFloat);
     }
-
-
   }
 
-
+  
   /**
    * Checks if two entries are equal.
    *
