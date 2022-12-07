@@ -23,6 +23,7 @@ public class NumStack {
 
   /**
    * Pushes a Float to the NumStack.
+   * @return 
    *
    * @paramThe Float to be pushed to the NumStack.
    * 
@@ -38,14 +39,13 @@ public class NumStack {
    * Pops values from the NumStack.
    * 
    */
-  public Entry pop() {
+  public float pop() {
     if (size == 0) {
       throw new EmptyStackException();
     }
-
     Entry oldEntry = numstack.pop();
     size--;
-    return oldEntry;
+    return oldEntry.getValue();
   }
 
   /**
