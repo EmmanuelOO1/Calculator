@@ -35,6 +35,16 @@ class StandardCalcTest {
     assertEquals(standardCalc.evaluate("3 - 2"), 1.0f, "3 - 2 should be 1");
   }
   
+  // 4
+  //should be able to add two negative numbers
+  @Test
+  void testMinusMinus() {
+    assertEquals(standardCalc.evaluate("-3 - -2"), -5.0f, "-3 - -2 should be -5");
+  }
+  
+  
+  
+  
 
 }
   
