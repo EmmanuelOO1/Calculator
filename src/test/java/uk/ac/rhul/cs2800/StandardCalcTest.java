@@ -50,12 +50,21 @@ class StandardCalcTest {
     assertEquals(standardCalc.evaluate("3 * 2"), 6f, "3 * 2 should be 6");
   }
 
-  // 5
+  // 6
   // should be able to times two negative numbers
   @Test
-  void testTimes() {
-    assertEquals(standardCalc.evaluate("3 * 2"), 6f, "3 * 2 should be 6");
+  void testTimesTimes() {
+    assertEquals(standardCalc.evaluate("-3 * -2"), 6f, "-3 * -2 should be 6");
   }
+  
+  // 6
+  // should be able to divide two positive numbers
+  @Test
+  void testTimesTimes() {
+    assertEquals(standardCalc.evaluate("-3 * -2"), 6f, "-3 * -2 should be 6");
+  }
+
+
 
 
 
