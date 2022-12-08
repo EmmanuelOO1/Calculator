@@ -1,6 +1,6 @@
 package uk.ac.rhul.cs2800;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,14 +20,12 @@ class StandardCalcTest {
     assertEquals(standardCalc.evaluate("2 + 3"), 5.0f, "2+ 3 should be 5");
   }
 
-
   // 2
   // should be able to add two negative numbers
   @Test
   void testAddNegative() {
     assertEquals(standardCalc.evaluate("-2 + -3"), 5.0f, "-2+ -3 should be 5");
   }
-
 
   // 3
   // should be able to subtract two positive numbers
@@ -56,14 +54,20 @@ class StandardCalcTest {
   void testTimesTimes() {
     assertEquals(standardCalc.evaluate("-3 * -2"), 6f, "-3 * -2 should be 6");
   }
-  
-  // 6
+
+  // 7
   // should be able to divide two positive numbers
   @Test
-  void testTimesTimes() {
-    assertEquals(standardCalc.evaluate("-3 * -2"), 6f, "-3 * -2 should be 6");
+  void testDivide() {
+    assertEquals(standardCalc.evaluate("6 / 2"), 3f, "6 / 2 should be 3");
   }
-
+  
+  // 8
+  // should be able to divide two positive numbers
+  @Test
+  void testDivideDivide() {
+    assertEquals(standardCalc.evaluate("6 / -2"), 3f, "6 / -2 should be -3");
+  }
 
 
 
