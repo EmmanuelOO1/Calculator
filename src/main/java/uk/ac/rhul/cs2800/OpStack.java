@@ -61,6 +61,15 @@ public class OpStack {
       return false;
     }
   }
+  
+  /**
+   * Finds the symbol at the top entry in the stack.
+   *
+   * @return Returns the top symbol
+   */
+  public Symbol top() {
+    return opStack.top().getSymbol();
+  }
 
 
 }

@@ -63,6 +63,14 @@ public class Entry {
     return myString;
   }
 
+  /**
+   * Gets the Symbol.
+   *
+   * @return Symbol
+   */
+  public Symbol getSymbol() {
+    return other;
+  }
 
   /**
    * Converts the content of the entry (float) to a string.
