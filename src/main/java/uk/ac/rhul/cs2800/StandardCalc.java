@@ -2,42 +2,31 @@ package uk.ac.rhul.cs2800;
 
 public class StandardCalc {
   OpStack values = new OpStack();
+  StrStack queue = new StrStack();
   RevPolishCalc rpCalc = new RevPolishCalc();
 
-  // LIFO STACK
-  // FIFO QUEUE
-  // Process all symbols
 
-  // enqueue any num
-  // push any operator on stack
-
-  // when i pop i keep track of presedence
-  // presedence = PEMDAS
-
-  // queue = string stack
-
-  
-  // Read a token
-  //if its a number add it to a queue
-  //if its a operator
-  //    While there is an operator with greater presidence
-  
-  //            Pop operators from the stack onto the output queue
-  //        push current operator onto the stack
-  //    If its a left bracker push it at the top of the stack
-  //    if its a right bracker
-  //        While theres not a left at the top of the stack
-  //            pop operators from the stack onto the queue
-  //        pop the left bracket from the stack and discard it
-  //While there are operators on the stack pop them to queue
-
+  /**
+   * Evaluate method which is ultimatly responsible for calculations.
+   *
+   * @param string which hold the nums and operators
+   * @return Result of the calculation
+   */
   public float evaluate(String string) {
-
     String[] numSymbols = string.split(" ");
-
     for (int i = 0; i < numSymbols.length; i++) {
-
       switch (numSymbols[i]) {
+        case "(":
+          values.push(Symbol.LEFT_BRACKET);
+          break;
+
+        case ")":
+          while (!values.top().equals(Symbol.LEFT_BRACKET)) {
+            queue.push(values.pop().toString());
+          }
+          values.pop();
+          break;
+
         case "/":
           values.push(Symbol.DIVIDE);
           break;
@@ -47,30 +36,57 @@ public class StandardCalc {
           break;
 
         case "+":
-          // if values is not empty
-            // if the top of values is * or /
-              // the while loop w/ greater precedence thing
-          
+          while (!values.isEmpty()) {
+            if ((values.top().equals(Symbol.DIVIDE)) || (values.top().equals(Symbol.TIMES))) {
+              queue.push(values.pop().toString());
+            } else {
+              break;
+            }
+          }
           values.push(Symbol.PLUS);
           break;
 
         case "-":
-          // if values is not empty
-          // if the top of values is * or /
-            // the while loop w/ greater precedence thing
-          
-          values.push(value2 / value1);
+          while (!values.isEmpty()) {
+            if ((values.top().equals(Symbol.DIVIDE)) || (values.top().equals(Symbol.TIMES))) {
+              queue.push(values.pop().toString());
+            } else {
+              break;
+            }
+          }
+          values.push(Symbol.MINUS);
           break;
 
-        case "(":
-          break;
-          
-        case ")":
-          break;
-          
+        default:
+          queue.push(numSymbols[i]);
       }
     }
-    return;
+
+    while (!values.isEmpty()) {
+      queue.push(values.pop().toString());
+    }
+
+
+    // used to reverse the order of StrStack queue
+    StrStack calcStack = new StrStack();
+
+    while (!queue.isEmpty()) {
+      calcStack.push(queue.pop());
+    }
+
+    String rpn = "";
+
+    while (!calcStack.isEmpty()) {
+      rpn += calcStack.pop() + " ";
+    }
+
+    rpn = rpn.trim();
+
+
+
+    return rpCalc.evaluate(rpn);
+
+
   }
 
 }

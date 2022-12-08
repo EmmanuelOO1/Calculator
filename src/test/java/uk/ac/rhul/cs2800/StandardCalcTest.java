@@ -24,7 +24,7 @@ class StandardCalcTest {
   // should be able to add two negative numbers
   @Test
   void testAddNegative() {
-    assertEquals(standardCalc.evaluate("-2 + -3"), 5.0f, "-2+ -3 should be 5");
+    assertEquals(standardCalc.evaluate("-2 + -3"), -5.0f, "-2+ -3 should be 5");
   }
 
   // 3
@@ -38,7 +38,7 @@ class StandardCalcTest {
   // should be able to subtract two negative numbers
   @Test
   void testMinusMinus() {
-    assertEquals(standardCalc.evaluate("-3 - -2"), -5.0f, "-3 - -2 should be -5");
+    assertEquals(standardCalc.evaluate("-3 - -2"), -1.0f, "-3 - -2 should be -5");
   }
 
   // 5
@@ -66,7 +66,7 @@ class StandardCalcTest {
   // should be able to divide two positive numbers
   @Test
   void testDivideDivide() {
-    assertEquals(standardCalc.evaluate("6 / -2"), 3f, "6 / -2 should be -3");
+    assertEquals(standardCalc.evaluate("6 / -2"), -3f, "6 / -2 should be -3");
   }
 
 

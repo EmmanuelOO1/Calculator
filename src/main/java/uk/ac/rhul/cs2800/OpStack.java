@@ -20,7 +20,7 @@ public class OpStack {
    * @return size of opStack
    *
    */
-  public Integer size() {
+  public int size() {
     return size;
   }
 
@@ -39,13 +39,13 @@ public class OpStack {
    *
    * @return the old entry popped from the list 
    */
-  public Object pop() {
+  public Symbol pop() {
     if (size == 0) {
       throw new EmptyStackException();
     }
     Entry oldEntry = opStack.pop();
     size--;
-    return oldEntry;
+    return oldEntry.getSymbol();
 
   }
 
@@ -54,7 +54,7 @@ public class OpStack {
    *
    * @return whether opStack is empty or not 
    */
-  public Object isEmpty() {
+  public boolean isEmpty() {
     if (size == 0) {
       return true;
     } else {

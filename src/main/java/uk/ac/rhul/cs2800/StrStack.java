@@ -39,14 +39,14 @@ public class StrStack {
    *
    * @Returns the entry that was poped from the StrStack
    */
-  public Entry pop() {
+  public String pop() {
     if (size == 0) {
       throw new EmptyStackException();
     }
 
     Entry oldEntry = strStack.pop();
     size--;
-    return oldEntry;
+    return oldEntry.getString();
 
   }
 
@@ -55,7 +55,7 @@ public class StrStack {
    *
    * @return True or false if its empty or not
    */
-  public Object isEmpty() {
+  public boolean isEmpty() {
     if (size == 0) {
       return true;
     }

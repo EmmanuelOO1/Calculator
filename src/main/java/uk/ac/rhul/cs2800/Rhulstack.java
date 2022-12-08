@@ -46,7 +46,7 @@ public class Rhulstack {
     }
 
     Entry oldEntry = value.get(size - 1);
-    value.remove(oldEntry);
+    value.remove(size-1);
     size--;
     return oldEntry;
 
