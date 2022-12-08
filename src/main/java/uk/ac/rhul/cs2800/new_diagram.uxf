@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>216</x>
-      <y>618</y>
+      <y>600</y>
       <w>168</w>
       <h>180</h>
     </coordinates>
@@ -34,7 +34,7 @@ bg=ORANGE</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>18</x>
-      <y>732</y>
+      <y>714</y>
       <w>132</w>
       <h>126</h>
     </coordinates>
@@ -58,7 +58,7 @@ bg=ORANGE</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>144</x>
-      <y>690</y>
+      <y>672</y>
       <w>84</w>
       <h>120</h>
     </coordinates>
@@ -69,7 +69,7 @@ bg=ORANGE</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>216</x>
-      <y>414</y>
+      <y>396</y>
       <w>174</w>
       <h>156</h>
     </coordinates>
@@ -97,7 +97,7 @@ bg=PINK</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>288</x>
-      <y>564</y>
+      <y>546</y>
       <w>18</w>
       <h>66</h>
     </coordinates>
@@ -108,7 +108,7 @@ bg=PINK</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>366</y>
+      <y>348</y>
       <w>150</w>
       <h>120</h>
     </coordinates>
@@ -133,7 +133,7 @@ bg=PINK</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>474</x>
-      <y>372</y>
+      <y>354</y>
       <w>150</w>
       <h>96</h>
     </coordinates>
@@ -158,7 +158,7 @@ bg=PINK</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>144</x>
-      <y>444</y>
+      <y>426</y>
       <w>84</w>
       <h>60</h>
     </coordinates>
@@ -170,7 +170,7 @@ bg=PINK</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>384</x>
-      <y>444</y>
+      <y>426</y>
       <w>102</w>
       <h>78</h>
     </coordinates>
@@ -182,7 +182,7 @@ bg=PINK</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>102</x>
-      <y>126</y>
+      <y>0</y>
       <w>126</w>
       <h>96</h>
     </coordinates>
@@ -203,18 +203,18 @@ bg=YELLOW</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>66</x>
-      <y>216</y>
+      <y>90</y>
       <w>108</w>
-      <h>156</h>
+      <h>264</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;240.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;420.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>240</x>
-      <y>276</y>
+      <y>156</y>
       <w>138</w>
       <h>90</h>
     </coordinates>
@@ -233,20 +233,20 @@ bg=YELLOW</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>198</x>
-      <y>216</y>
+      <y>90</y>
       <w>96</w>
-      <h>72</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>140.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>348</x>
-      <y>126</y>
+      <y>18</y>
       <w>126</w>
-      <h>96</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>_cs2800::StandardCalc_
 Evaluates Infix
@@ -265,20 +265,20 @@ bg=YELLOW</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>312</x>
-      <y>216</y>
+      <y>120</y>
       <w>108</w>
-      <h>72</h>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;100.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>234</y>
+      <x>186</x>
+      <y>276</y>
       <w>126</w>
-      <h>114</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>
 _cs2800::InvalidExpression_
@@ -288,19 +288,81 @@ _cs2800::InvalidExpression_
 -String: string
 --
 *Responsibilities*
-</panel_attributes>
+
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>372</y>
+      <w>150</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>_cs2800::StrStack_
+Since the Shutting algorithm
+only uses a Stack of symbols
+we provide a facade to hide details
+--
+*Attributes*
+-numstack: Rhulstack
+--
+*Responsibilities*
++push(i:float)
++pop(): float
+			{exeption=EmptyStack}
++isEmpty():boolean
+
+bg=PINK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>294</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;signal&gt;&gt;
+RuntimeExeption
+
+bg=YELLOW</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
-      <y>288</y>
-      <w>144</w>
-      <h>54</h>
+      <x>384</x>
+      <y>432</y>
+      <w>300</w>
+      <h>96</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=0..n</panel_attributes>
-    <additional_attributes>10.0;70.0;220.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+		&lt;&lt;facade&gt;&gt;</panel_attributes>
+    <additional_attributes>480.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>318</x>
+      <y>240</y>
+      <w>120</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>180.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>306</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;10.0</additional_attributes>
   </element>
 </diagram>
