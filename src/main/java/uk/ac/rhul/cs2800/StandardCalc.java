@@ -1,5 +1,11 @@
 package uk.ac.rhul.cs2800;
 
+/**
+ * My Infix Standard Calculator.
+ *
+ * @author emmanuelokolie
+ *
+ */
 public class StandardCalc {
   OpStack values = new OpStack();
   StrStack queue = new StrStack();
